@@ -80,7 +80,7 @@
     'contact.copy': 'copy',
     'contact.copied': 'copied ✓',
     'contact.cv': 'Download CV',
-    'footer.made': 'Handmade in Almagro — with Claude Code as copilot',
+    'footer.made': 'Handmade — with Claude Code as copilot',
     'footer.top': 'Back to top ↑'
   };
   var META = {
@@ -228,7 +228,7 @@
     });
   }
 
-  /* ---------------- Reloj de Almagro ---------------- */
+  /* ---------------- Reloj de Madrid ---------------- */
   var clock = document.getElementById('clock');
   function tick() {
     try {
