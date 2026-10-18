@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miguel León — Desarrollador Backend Java</title>
+  <meta name="description" content="Miguel León García Martínez · Desarrollador Backend Java (Spring Boot, Oracle, REST/SOAP). Portfolio, experiencia y proyectos." />
+  <meta name="author" content="Miguel León García Martínez" />
+  <meta property="og:title" content="Miguel León — Desarrollador Backend Java" />
+  <meta property="og:description" content="Java · Spring Boot · Oracle DB · React. Construyo sistemas que no se caen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/miguel.jpg" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23fff'%3Eml%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Tema e idioma antes de pintar, para evitar parpadeo
+    (function () {
+      try {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('ml-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+        var l = localStorage.getItem('ml-lang') || ((navigator.language || 'es').slice(0, 2) === 'es' ? 'es' : 'en');
+        document.documentElement.setAttribute('lang', l);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="Inicio">m<em>l</em>.</a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#work" data-i18n="nav.work">Experiencia</a>
+      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav__tools">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es">ES</button>
+        <span>/</span>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button type="button" class="theme" aria-label="Cambiar tema"><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas class="hero__graph" aria-hidden="true"></canvas>
+      <div class="hero__meta">
+        <span class="status"><i></i><span data-i18n="hero.status">Disponible para nuevas oportunidades</span></span>
+        <span class="mono hero__clock">Almagro, ES · <span id="clock">--:--</span></span>
+      </div>
+
+      <h1 class="hero__title" aria-label="Miguel León">
+        <span class="line"><span class="split">Miguel</span></span>
+        <span class="line line--right"><span class="split serif">León</span></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__lead reveal" data-i18n-html="hero.lead">Desarrollador <strong>Backend Java</strong>. Construyo APIs, procesos batch e integraciones que <em>no se caen</em> — y el frontend cuando hace falta.</p>
+        <ul class="hero__facts mono reveal">
+          <li><span data-i18n="hero.f1k">Ahora</span><b>Inetum · OEPM</b></li>
+          <li><span data-i18n="hero.f2k">Stack</span><b>Java · Spring · Oracle</b></li>
+          <li><span data-i18n="hero.f3k">Modo</span><b data-i18n="hero.f3v">Remoto / híbrido</b></li>
+          <li><span data-i18n="hero.f4k">Inglés</span><b>B2 · Cambridge First</b></li>
+        </ul>
+        <a href="#about" class="scroll-cue mono" aria-label="Bajar"><span data-i18n="hero.scroll">scroll</span><i></i></a>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Java 17</span><b>✳</b><span>Spring Boot 3</span><b>✳</b><span>Oracle DB</span><b>✳</b><span>REST · SOAP</span><b>✳</b><span>Keycloak</span><b>✳</b><span>React 19</span><b>✳</b><span>TypeScript</span><b>✳</b><span>Docker</span><b>✳</b><span>Linux</span><b>✳</b><span>Claude Code</span><b>✳</b>
+        <span>Java 17</span><b>✳</b><span>Spring Boot 3</span><b>✳</b><span>Oracle DB</span><b>✳</b><span>REST · SOAP</span><b>✳</b><span>Keycloak</span><b>✳</b><span>React 19</span><b>✳</b><span>TypeScript</span><b>✳</b><span>Docker</span><b>✳</b><span>Linux</span><b>✳</b><span>Claude Code</span><b>✳</b>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="section__label mono"><span>01</span><span data-i18n="nav.about">Sobre mí</span></div>
+      <div class="about__grid">
+        <p class="about__statement words" data-i18n="about.statement">Trabajo donde la estabilidad no es negociable: procesos batch que mueven miles de expedientes de propiedad industrial cada día, servicios SOAP de misión crítica y una plataforma que usan más de quinientas personas cada mañana. Me gusta entender por qué falla algo antes de tocar una línea.</p>
+        <aside class="about__side">
+          <figure class="portrait reveal">
+            <img src="assets/miguel.jpg" alt="Retrato de Miguel León" width="200" height="200" loading="lazy" />
+            <figcaption class="mono">Miguel León García Martínez</figcaption>
+          </figure>
+          <p class="reveal" data-i18n="about.p1">Desde marzo de 2025 en Inetum para la Oficina Española de Patentes y Marcas: primero en prácticas y, desde julio, como desarrollador junior asumiendo migraciones e incidencias de producción.</p>
+          <p class="reveal" data-i18n="about.p2">Fuera del trabajo sigo construyendo: un reproductor en Rust, un motor de predicción en Python, un tracker de candidaturas en Spring Boot… Uso Claude Code a diario como copiloto: saber exprimir la IA es parte del oficio.</p>
+        </aside>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><b><span class="count" data-to="500">0</span>+</b><span data-i18n="stats.s1">usuarios diarios en ALTERA WEB</span></div>
+        <div class="stat reveal"><b>−<span class="count" data-to="25">0</span>%</b><span data-i18n="stats.s2">errores en procesos batch</span></div>
+        <div class="stat reveal"><b>+<span class="count" data-to="40">0</span>%</b><span data-i18n="stats.s3">velocidad en consultas Oracle</span></div>
+        <div class="stat reveal"><b><span class="count" data-to="5">0</span>+</b><span data-i18n="stats.s4">apps migradas de Java 8 a 17</span></div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section work" id="work">
+      <div class="section__label mono"><span>02</span><span data-i18n="nav.work">Experiencia</span></div>
+
+      <article class="job reveal">
+        <div class="job__when mono" data-i18n="work.j1.when">jul. 2025 — hoy</div>
+        <div class="job__body">
+          <h3 data-i18n="work.j1.title">Desarrollador de Software Junior</h3>
+          <p class="job__org mono" data-i18n="work.j1.org">Inetum · Miguelturra (híbrido) · Cliente: OEPM</p>
+          <ul>
+            <li data-i18n="work.j1.b1">Resolví incidencias críticas en procesos batch Java/COBOL sobre Linux que bloqueaban notificaciones oficiales: −25 % de errores de procesamiento.</li>
+            <li data-i18n="work.j1.b2">Lideré la migración técnica de servidores Linux de 2006 a 2025 con prácticas CI/CD: +35 % de estabilidad.</li>
+            <li data-i18n="work.j1.b3">Migré más de 5 aplicaciones empresariales de Java 8 a Java 17 (Maven, APIs obsoletas, compatibilidad Spring Boot 3).</li>
+            <li data-i18n="work.j1.b4">Optimicé SQL y procedimientos almacenados en Oracle: +40 % en tiempos de respuesta en producción.</li>
+            <li data-i18n="work.j1.b5">Mantengo servicios SOAP de misión crítica (Java 8, Apache CXF, contratos WSDL) con JUnit y SonarQube bajo Scrum.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case__tag mono" data-i18n="work.case.tag">Proyecto destacado</div>
+        <h3 class="case__title">ALTERA <em>WEB</em></h3>
+        <p class="case__intro" data-i18n="work.case.intro">Sistema de digitalización documental que sustituye a la plataforma .NET heredada. Full-stack, en producción, más de 500 usuarios al día.</p>
+        <div class="case__cols">
+          <div>
+            <h4 class="mono">Backend</h4>
+            <p data-i18n="work.case.c1">Spring Boot 3.5 + Java 17. API REST de más de 18 endpoints: ciclo de vida documental, tareas, auditoría completa y carga masiva al gestor documental.</p>
+          </div>
+          <div>
+            <h4 class="mono" data-i18n="work.case.h2">Seguridad</h4>
+            <p data-i18n="work.case.c2">Keycloak 26 (OAuth2/JWT) con RBAC para 6 roles integrado con el Directorio Activo corporativo.</p>
+          </div>
+          <div>
+            <h4 class="mono" data-i18n="work.case.h3">Integraciones</h4>
+            <p data-i18n="work.case.c3">SOAP JAX-WS 4 (UCM, Platanot, Platarec), sellado y procesado de PDF, OCR con tesseract.js e informes JasperReports.</p>
+          </div>
+          <div>
+            <h4 class="mono">Frontend</h4>
+            <p data-i18n="work.case.c4">React 19 + TypeScript, Vite, Tailwind CSS 4 y Radix UI. Escaneo, visor y edición de documentos en el navegador.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="job__when mono" data-i18n="work.j2.when">mar. 2025 — jul. 2025</div>
+        <div class="job__body">
+          <h3 data-i18n="work.j2.title">Desarrollador de Software en Prácticas</h3>
+          <p class="job__org mono" data-i18n="work.j2.org">Inetum · Remoto · Cliente: OEPM</p>
+          <ul>
+            <li data-i18n="work.j2.b1">Componentes backend Java para servicios SOAP y REST con un 99,9 % de integridad de datos en alta disponibilidad.</li>
+            <li data-i18n="work.j2.b2">Más de 25 casos de prueba unitarios con JUnit y seguimiento de deuda técnica con SonarQube.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="job__when mono" data-i18n="work.j3.when">sept. 2023 — jun. 2025</div>
+        <div class="job__body">
+          <h3 data-i18n="work.j3.title">CFGS Desarrollo de Aplicaciones Multiplataforma</h3>
+          <p class="job__org mono">IES Maestre de Calatrava · Ciudad Real</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects invert" id="projects">
+      <div class="section__label mono"><span>03</span><span data-i18n="nav.projects">Proyectos</span></div>
+      <h2 class="big-title"><span data-i18n="projects.title1">Cosas que</span> <em data-i18n="projects.title2">he construido</em></h2>
+
+      <ol class="plist">
+        <li class="prow reveal">
+          <a href="https://github.com/Sefirr-dot/hiretrack-api" target="_blank" rel="noopener">
+            <span class="prow__n mono">01</span>
+            <span class="prow__name">HireTrack API</span>
+            <span class="prow__desc" data-i18n="p.hiretrack">API REST de nivel producción para seguir candidaturas, entrevistas y ofertas. Nació mientras buscaba trabajo.</span>
+            <span class="prow__tags mono">Java 21 · Spring Boot 3 · JWT · PostgreSQL · Redis · Docker</span>
+            <span class="prow__arrow">↗</span>
+          </a>
+        </li>
+        <li class="prow reveal">
+          <a href="https://github.com/Sefirr-dot/BetWinninGames" target="_blank" rel="noopener">
+            <span class="prow__n mono">02</span>
+            <span class="prow__name">BetWinninGames</span>
+            <span class="prow__desc" data-i18n="p.bet">Motor estadístico de predicción de fútbol (Dixon-Coles, Elo) para las 4 grandes ligas, con visualizador, bankroll y análisis con IA local.</span>
+            <span class="prow__tags mono">Python · Poisson · Elo · Ollama</span>
+            <span class="prow__arrow">↗</span>
+          </a>
+        </li>
+        <li class="prow reveal">
+          <a href="https://github.com/Sefirr-dot/Rustanmp" target="_blank" rel="noopener">
+            <span class="prow__n mono">03</span>
+            <span class="prow__name">Rustanmp</span>
+            <span class="prow__desc" data-i18n="p.rust">Reproductor de música de escritorio inspirado en Winamp: FLAC/MP3/OGG, carátulas, playlists que se recargan solas.</span>
+            <span class="prow__tags mono">Rust · Symphonia · WASAPI</span>
+            <span class="prow__arrow">↗</span>
+          </a>
+        </li>
+        <li class="prow reveal">
+          <a href="https://github.com/Sefirr-dot/blip-challenge" target="_blank" rel="noopener">
+            <span class="prow__n mono">04</span>
+            <span class="prow__name">Blip Challenge</span>
+            <span class="prow__desc" data-i18n="p.blip">API RESTful intermedia en .NET 10 con arquitectura por capas (SOLID), tests xUnit y despliegue en Render, consumida por un chatbot.</span>
+            <span class="prow__tags mono">C# · .NET 10 · ASP.NET Core · xUnit</span>
+            <span class="prow__arrow">↗</span>
+          </a>
+        </li>
+        <li class="prow reveal">
+          <a href="https://github.com/Sefirr-dot/CrawlerOS" target="_blank" rel="noopener">
+            <span class="prow__n mono">05</span>
+            <span class="prow__name">CrawlerOS</span>
+            <span class="prow__desc" data-i18n="p.crawler">Un “sistema operativo” retro en el navegador: crawler con Playwright, reproductor, telemetría y gráficos en tiempo real.</span>
+            <span class="prow__tags mono">Python · Flask · Playwright · Vanilla JS</span>
+            <span class="prow__arrow">↗</span>
+          </a>
+        </li>
+        <li class="prow reveal">
+          <a href="https://github.com/Sefirr-dot/seffir-dot.github.io" target="_blank" rel="noopener">
+            <span class="prow__n mono">06</span>
+            <span class="prow__name">MikiPaste</span>
+            <span class="prow__desc" data-i18n="p.paste">Pastebin minimalista y estático, publicado en GitHub Pages.</span>
+            <span class="prow__tags mono">HTML · CSS · JS</span>
+            <span class="prow__arrow">↗</span>
+          </a>
+        </li>
+      </ol>
+      <a class="link-more mono" href="https://github.com/Sefirr-dot" target="_blank" rel="noopener"><span data-i18n="projects.more">Todo en GitHub</span> → @Sefirr-dot</a>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section class="section stack">
+      <div class="section__label mono"><span>04</span><span data-i18n="stack.label">Herramientas</span></div>
+      <div class="stack__grid">
+        <div class="reveal"><h4 class="mono" data-i18n="stack.lang">Lenguajes</h4><p>Java 17 / 8 · TypeScript · JavaScript · SQL · Python · C# · Rust</p></div>
+        <div class="reveal"><h4 class="mono">Frameworks</h4><p>Spring Boot 3 · Spring MVC · JPA / Hibernate · Apache CXF · JAX-WS · React 19 · Angular · Node / Express</p></div>
+        <div class="reveal"><h4 class="mono" data-i18n="stack.data">Datos y seguridad</h4><p>Oracle DB · PL/SQL · PostgreSQL · Redis · Keycloak · OAuth2 · JWT · RBAC</p></div>
+        <div class="reveal"><h4 class="mono">DevOps</h4><p>Git · Maven · Docker · Jenkins · Linux · CI/CD · SonarQube · JUnit</p></div>
+        <div class="reveal"><h4 class="mono" data-i18n="stack.ways">Forma de trabajar</h4><p data-i18n="stack.waysv">Scrum · revisión de código · TDD · causa raíz antes que parche · IA como copiloto</p></div>
+        <div class="reveal"><h4 class="mono" data-i18n="stack.langs">Idiomas</h4><p data-i18n="stack.langsv">Español nativo · Inglés B2 (Cambridge First, 163)</p></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact invert" id="contact">
+      <div class="section__label mono"><span>05</span><span data-i18n="nav.contact">Contacto</span></div>
+      <p class="contact__kicker" data-i18n="contact.kicker">¿Tienes un proyecto o un puesto en mente?</p>
+      <a class="contact__big" href="mailto:miguel.leon.garcia@outlook.es">
+        <span data-i18n="contact.big">Hablemos</span><em>.</em>
+      </a>
+      <div class="contact__row">
+        <button type="button" class="pill copy" data-email="miguel.leon.garcia@outlook.es">
+          <span class="mono">miguel.leon.garcia@outlook.es</span>
+          <span class="copy__hint mono" data-i18n="contact.copy">copiar</span>
+        </button>
+        <a class="pill" href="https://www.linkedin.com/in/miguelleongm/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="pill" href="https://github.com/Sefirr-dot" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="pill pill--solid" id="cv-link" href="assets/CV_Miguel_Leon_ES.pdf" download><span data-i18n="contact.cv">Descargar CV</span> ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© 2026 Miguel León García Martínez</span>
+    <span data-i18n="footer.made">Hecho a mano en Almagro — con Claude Code de copiloto</span>
+    <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
